@@ -10,7 +10,6 @@
 ```
 [POST request]: {{url}}/users
 ```
-***
 body(JSON):
 1. name field is required
 2. age field is not required, cannot not be less than 0. default age is set to 0.
@@ -24,11 +23,11 @@ body(JSON):
     "password": "yoursecretpsword"
 }
 ```
+***
 2. Login your account
 ```
 [POST request]: {{url}}/users/login
 ```
-***
 body(JSON):
 ```
 {
@@ -36,6 +35,7 @@ body(JSON):
     "password": "yoursecretpsword"
 }
 ```
+***
 3. Logout your account (no JSON body needed)
 ```
 [POST request]: {{url}}/users/logout
@@ -55,7 +55,6 @@ body(JSON):
 ```
 [PATCH request]: {{url}}/users/me
 ```
-***
 body(JSON):
 ```
 {
@@ -65,6 +64,7 @@ body(JSON):
     "password": "yoursecretpsword"
 }
 ```
+***
 7. Delete your account (Can only be deleted after you login, no JSON body needed)
 ```
 [DELETE request]: {{url}}/users/me
@@ -74,11 +74,11 @@ body(JSON):
 ```
 [POST request]: {{url}}/users/me/avatar
 ```
-***
 body:
 ```
 KEY: avatar, VALUE: pic from you computer
 ```
+***
 9. Delete the profile image of your account
 ```
 [DELETE request]: {{url}}/users/me/avatar
