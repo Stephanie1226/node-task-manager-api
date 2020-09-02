@@ -1,8 +1,8 @@
 # node-task-manager-api
 * This is a back-end project using nodejs/express and mongoDB hosting on heroku with the following link: https://chieh-task-manager.herokuapp.com
 * Two documents saved in mongoDB: User, Task
-* User document is for creating new users, storage existing users an delete existing users. User information includes "name", "age", "email" and "password".
-* Task document is for saving tasks for every users. Task information includes "name", and "completed".
+* User document saves the user information, including "name", "age", "email" and "password".
+* Task document saves tasks information, including "description", and "completed".
 
 ## Query string varaibles
 ### User
@@ -82,5 +82,22 @@ KEY: avatar, VALUE: pic from you computer
 9. Delete the profile image of your account
 ```
 [DELETE request]: {{url}}/users/me/avatar
+```
+***
+### Task
+1. Create a new task
+```
+[POST request]: {{url}}/tasks
+```
+body(JSON):
+1. description field is required
+2. age field is not required, cannot not be less than 0. default age is set to 0.
+3. email field is required
+4. password field is required, cannot not set this field as "password". Minimun length is set to 7.
+```
+{
+    "description": "Wipe down the counter!",
+    "completed": true
+}
 ```
 ***
