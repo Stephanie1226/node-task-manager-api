@@ -91,9 +91,7 @@ KEY: avatar, VALUE: pic from you computer
 ```
 body(JSON):
 1. description field is required
-2. age field is not required, cannot not be less than 0. default age is set to 0.
-3. email field is required
-4. password field is required, cannot not set this field as "password". Minimun length is set to 7.
+2. completed field is not required. Default is set to false.
 ```
 {
     "description": "Wipe down the counter!",
@@ -101,3 +99,10 @@ body(JSON):
 }
 ```
 ***
+2. Filter out your tasks
+```
+[GET request]: {{url}}/tasks
+GET /tasks?completed=true
+GET /tasks?limit=10&skip=0
+GET /tasks?sortBy=createdAt:asc (or createdAt:desc)
+```
